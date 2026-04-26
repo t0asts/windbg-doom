@@ -2,6 +2,8 @@
 
 A plugin to play DOOM inside WinDbg.
 
+Video showcase: [https://www.youtube.com/watch?v=lDo061NRSHg](https://www.youtube.com/watch?v=lDo061NRSHg)  
+
 ## Build
 
 Ensure you have the .NET 9 SDK installed.
