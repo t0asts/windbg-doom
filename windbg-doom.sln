@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "windbg-doom", "windbg-doom\windbg-doom.csproj", "{04722996-97B2-4994-816D-1CE5862952DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04722996-97B2-4994-816D-1CE5862952DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04722996-97B2-4994-816D-1CE5862952DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04722996-97B2-4994-816D-1CE5862952DB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{04722996-97B2-4994-816D-1CE5862952DB}.Debug|x64.Build.0 = Debug|Any CPU
+		{04722996-97B2-4994-816D-1CE5862952DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04722996-97B2-4994-816D-1CE5862952DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04722996-97B2-4994-816D-1CE5862952DB}.Release|x64.ActiveCfg = Release|Any CPU
+		{04722996-97B2-4994-816D-1CE5862952DB}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC52C7CF-CDE8-4812-99CA-22BF8F6CE863}
+	EndGlobalSection
+EndGlobal
