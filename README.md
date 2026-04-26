@@ -1,6 +1,8 @@
 # WinDbg DOOM
 
-A plugin to play DOOM inside WinDbg.
+![Doom](doom.png)  
+
+A debugger extension to play DOOM inside WinDbg.
 
 Video showcase: [https://www.youtube.com/watch?v=lDo061NRSHg](https://www.youtube.com/watch?v=lDo061NRSHg)  
 
@@ -27,5 +29,5 @@ In WinDbg:
 
 ## Credits
 
-Credit to Nobuaki Tanaka for [Managed Doom](https://github.com/sinshu/managed-doom), which this plugin uses internally.  
+Credit to Nobuaki Tanaka for [Managed Doom](https://github.com/sinshu/managed-doom), which this extension uses internally.  
 Credit to id Software for DOOM.
