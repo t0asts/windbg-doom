@@ -4,6 +4,7 @@
 
 A debugger extension to play DOOM inside WinDbg.
 
+Writeup: [https://t0asts.com/windbg-doom](https://t0asts.com/windbg-doom)  
 Video showcase: [https://www.youtube.com/watch?v=lDo061NRSHg](https://www.youtube.com/watch?v=lDo061NRSHg)  
 
 ## Build
