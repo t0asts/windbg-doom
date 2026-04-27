@@ -11,16 +11,8 @@ namespace WindbgDoom
 
         private const uint DEBUG_OUTPUT_NORMAL = 0x1;
 
-        private const uint DEBUG_OUTCTL_ALL_CLIENTS = 0x00000001;
-        private const uint DEBUG_OUTCTL_IGNORE = 0x00000003;
-        private const uint DEBUG_OUTCTL_DML = 0x00000020;
-
-        private const uint DEBUG_EXECUTE_NOT_LOGGED = 0x00000002;
-
         private const int VtblGetInterrupt = 3;
         private const int VtblOutput = 14;
-        private const int VtblControlledOutput = 16;
-        private const int VtblExecute = 66;
 
         private IntPtr _control;
 
@@ -58,39 +50,6 @@ namespace WindbgDoom
             fixed (byte* msgPtr = msg)
             {
                 _ = output(_control, DEBUG_OUTPUT_NORMAL, fmtPtr, msgPtr);
-            }
-        }
-
-        public void WriteDml(string dml)
-        {
-            if (_control == IntPtr.Zero || string.IsNullOrEmpty(dml)) return;
-
-            byte[] fmt = Encoding.ASCII.GetBytes("%s\0");
-            byte[] msg = Encoding.UTF8.GetBytes(dml + "\0");
-
-            IntPtr* vtable = *(IntPtr**)_control;
-            var output = (delegate* unmanaged[Stdcall]<IntPtr, uint, uint, byte*, byte*, int>)vtable[VtblControlledOutput];
-
-            uint outputControl = DEBUG_OUTCTL_ALL_CLIENTS | DEBUG_OUTCTL_DML;
-            fixed (byte* fmtPtr = fmt)
-            fixed (byte* msgPtr = msg)
-            {
-                _ = output(_control, outputControl, DEBUG_OUTPUT_NORMAL, fmtPtr, msgPtr);
-            }
-        }
-
-        public void Execute(string command)
-        {
-            if (_control == IntPtr.Zero || string.IsNullOrEmpty(command)) return;
-
-            byte[] cmdBytes = Encoding.ASCII.GetBytes(command + "\0");
-
-            IntPtr* vtable = *(IntPtr**)_control;
-            var execute = (delegate* unmanaged[Stdcall]<IntPtr, uint, byte*, uint, int>)vtable[VtblExecute];
-
-            fixed (byte* p = cmdBytes)
-            {
-                _ = execute(_control, DEBUG_OUTCTL_IGNORE, p, DEBUG_EXECUTE_NOT_LOGGED);
             }
         }
 

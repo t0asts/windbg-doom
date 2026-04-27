@@ -12,7 +12,6 @@ namespace WindbgDoom
         private readonly int _charsW;
         private readonly int _charsH;
         private readonly StringBuilder _sb;
-        private bool _firstFrame = true;
 
         public AsciiRenderer(DbgEngOutput output, int srcWidth, int srcHeight, int charsW, int charsH)
         {
@@ -61,9 +60,6 @@ namespace WindbgDoom
                 }
                 _sb.Append('\n');
             }
-
-            if (_firstFrame) _firstFrame = false;
-            else _output.Execute(".cls");
 
             _output.Write(_sb.ToString());
         }
