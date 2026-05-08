@@ -1,6 +1,6 @@
 # WinDbg DOOM
 
-![Doom](doom.png)  
+![Doom](media/doom.png)  
 
 A debugger extension to play DOOM inside WinDbg.
 
